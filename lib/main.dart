@@ -27,29 +27,34 @@ class MyApp extends StatelessWidget {
               decoration: InputDecoration(
                   border: OutlineInputBorder(), labelText: 'username!!'),
             ),
-            
             Padding(padding: EdgeInsets.all(10.0)),
             TextField(
               decoration: InputDecoration(
                   border: OutlineInputBorder(), labelText: 'password'),
             ),
-            
-           
             Padding(padding: EdgeInsets.all(10.0)),
             FlatButton(
                 color: Colors.amberAccent,
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                      context, MaterialPageRoute(builder: (context) => home()));
+                },
                 child: Text("login")),
-                 MaterialButton(onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => home()),
-              );
-            }),
-                
           ],
         ),
       ),
     );
   }
 }
+class hello extends StatelessWidget {
+  const hello({ Key? key }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: home(),
+      
+    );
+  }
+}
+
