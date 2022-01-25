@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'homepage.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -25,20 +27,29 @@ class MyApp extends StatelessWidget {
               decoration: InputDecoration(
                   border: OutlineInputBorder(), labelText: 'username!!'),
             ),
+            
             Padding(padding: EdgeInsets.all(10.0)),
             TextField(
               decoration: InputDecoration(
                   border: OutlineInputBorder(), labelText: 'password'),
             ),
+            
+           
             Padding(padding: EdgeInsets.all(10.0)),
             FlatButton(
                 color: Colors.amberAccent,
                 onPressed: () {},
-                child: Text("login"))
+                child: Text("login")),
+                 MaterialButton(onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => home()),
+              );
+            }),
+                
           ],
         ),
       ),
     );
   }
 }
-
